@@ -5,7 +5,15 @@
       <p class="hero-text">
         Books on the Move is your go-to destination for renting and reading the latest and greatest books anytime, anywhere. Our online book rental service offers a vast selection of popular titles across a variety of genres, from thrilling mysteries to heartwarming romance and everything in between.
       </p>
-      <a href="./index.php?module=registration" class="btn">Register Now</a>
+
+        <!-- opasna zona -->
+
+      <?php 
+      if(!isset($_SESSION['email']) || $_SESSION['email'] !== 1)
+        echo '<a href="./index.php?module=registration" class="btn">Register Now</a>';
+      ?>
+
+
     </div>
     <div class="hero-img">
       <img src="./public/img/hero-img.png" alt="hero-image">

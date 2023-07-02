@@ -8,7 +8,7 @@
             <label for="password">Password</label>
             <input type="password" name="password" >
             <button class="submit-login" type="submit" name="submit-login">Log in</button>
-       </form>
+      </form>
       <p class="register-link">Don't have an account? <a href="./index.php?module=registration">Sign Up</a></p>
 </section>
 

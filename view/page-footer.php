@@ -1,7 +1,7 @@
 <div class="footer-wrapper">
   <footer class="footer container" >
     <div class="footer-left">
-      <img src="./public/img/logo.png" alt="Logo">
+      <a href="./index.php"><img src="./public/img/logo.png" alt="Logo"></a>
     </div>
     <div class="footer-right">
       <ul class="footer-nav">

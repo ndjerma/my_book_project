@@ -1,5 +1,6 @@
 <body>
 
+<div class="header-wrapper">
   <nav class="container nav-bar">
     <div class="logo">
       <a href="./index.php"><img src="./public/img/logo.png" alt="logo"></a>
@@ -16,4 +17,4 @@
       <?php endif; ?>
     </ul>
   </nav>
-
+</div>
