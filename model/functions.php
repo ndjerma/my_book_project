@@ -26,9 +26,6 @@ function user_exists($user){
   }  
 }
 
-
-
-
 function set_message($message){
   if(!empty($message)){
     $_SESSION['message'] = $message;

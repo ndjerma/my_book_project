@@ -16,7 +16,6 @@
 
   } 
   
-
   $page_output = [
     'page_title' => 'Contact Us',
     'view' => 'module-contact.php'

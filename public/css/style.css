@@ -241,6 +241,9 @@ footer {
   height: 90vh;
 }
 
+.contact-page .btn {
+margin-top: 1rem;
+}
 .contact-form {
   display: flex;
   flex-direction: column;
