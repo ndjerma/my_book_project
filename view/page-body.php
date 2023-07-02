@@ -6,13 +6,12 @@
         Books on the Move is your go-to destination for renting and reading the latest and greatest books anytime, anywhere. Our online book rental service offers a vast selection of popular titles across a variety of genres, from thrilling mysteries to heartwarming romance and everything in between.
       </p>
 
-        <!-- opasna zona -->
-
-      <?php 
-      if(!isset($_SESSION['email']) || $_SESSION['email'] !== 1)
-        echo '<a href="./index.php?module=registration" class="btn">Register Now</a>';
-      ?>
-
+        <?php 
+              if(!isset($_SESSION['email'])){
+                echo '<a href="./index.php?module=registration" class="btn">Register Now</a>';
+              } elseif(isset($_SESSION['email']) && $_SESSION['email'] == true){
+              } 
+        ?>
 
     </div>
     <div class="hero-img">
