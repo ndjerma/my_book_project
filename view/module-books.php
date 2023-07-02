@@ -1,5 +1,4 @@
 
-
 <h1 class="page-title"> <?= $page_output['page_title'] ?> </h1>
 
 <form method="POST">
@@ -33,8 +32,7 @@
       while($row = $result->fetch_assoc()) {
         echo '<div class="book-wrapper">
                 <div class="book-img">
-                  
-                  <a href="./index.php?module=book&book_id=' . $row["book_id"] . '"><img src="' . $row["book_image_path"] . '" alt="" class="book-photo"></a>
+                 <a href="./index.php?module=book&book_id=' . $row["book_id"] . '"><img src="' . $row["book_image_path"] . '" alt="" class="book-photo"></a>
                 </div>
               <p class="book-title">' . $row["book_name"] . '</p>
               <p class="book-author">' . $row["book_author_name"] . '</p>

@@ -23,36 +23,26 @@
 <!-- DISCOVER BOOKS -->
 
   <section class="discover-books container">
-    <h2 class="section-title">Most popular books</h2>
+    <h2 class="section-title">Some of our books</h2>
     <div class="books-wrapper">
-      <div class="book-wrapper">
-        <div class="book-img">
-          <a href=""><img src="./public/img/book.jpg" alt="" class="book-photo"></a>
-        </div>
-        <p class="book-title">Atomic Habits</p>
-        <p class="book-author">James Clear</p>
-      </div>
-      <div class="book-wrapper">
-        <div class="book-img">
-          <a href=""><img src="./public/img/book.jpg" alt="" class="book-photo"></a>
-        </div>
-        <p class="book-title">Atomic Habits</p>
-        <p class="book-author">James Clear</p>
-      </div>
-      <div class="book-wrapper">
-        <div class="book-img">
-          <a href=""><img src="./public/img/book.jpg" alt="" class="book-photo"></a>
-        </div>
-        <p class="book-title">Atomic Habits</p>
-        <p class="book-author">James Clear</p>
-      </div>
-      <div class="book-wrapper">
-        <div class="book-img">
-          <a href=""><img src="./public/img/book.jpg" alt="" class="book-photo"></a>
-        </div>
-        <p class="book-title">Atomic Habits</p>
-        <p class="book-author">James Clear</p>
-      </div>
+      <?php
+        // SQL upit koji prikazuje četiri nasumične knjige
+        $query = "SELECT * FROM book ORDER BY RAND() LIMIT 4";
+        $result = query($query);
+
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+            echo '<div class="book-wrapper">
+                    <div class="book-img">
+                      <a href="./index.php?module=book&book_id=' . $row["book_id"] . '"><img src="' . $row["book_image_path"] . '" alt="" class="book-photo"></a>
+                    </div>
+                    <p class="book-title">' . $row["book_name"] . '</p>
+                    <p class="book-author">' . $row["book_author_name"] . '</p>
+                  </div>';
+          }
+        } else {
+          echo "0 results";
+      }?>
     </div>
     <a href="./index.php?module=books" class="btn">Discover more</a>
   </section>
