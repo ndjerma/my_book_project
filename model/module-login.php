@@ -23,7 +23,7 @@ if ($_POST) {
 
       if (!empty($errors)) {
             foreach ($errors as $error) {
-              $error_msg .= '<div class="alert">' . $error . '</div>';
+            $error_msg .= '<div class="alert">' . $error . '</div>';
             }
       }      
 
