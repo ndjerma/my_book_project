@@ -28,21 +28,6 @@ if (isset($_GET['book_id'])) {
 
 ?>
 
-          <!-- <div class="single-book-wrapper container">
-            <div class="book-cover">
-              <img src="./public/book-img/alhemicar.jpg" alt="" >
-            </div>
-            <div class="book-info">
-              <h2 class="single-book-title">Alhemicar</h2>
-              <p class="single-book-author">Author: Paulo Koeljo</p>
-              <p class="single-book-description">Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo expedita saepe labore. Fugiat repellat asperiores consequatur voluptate nobis. Quos quo sint harum soluta labore sed. Aut nisi recusandae odio explicabo!</p>
-              <p class="single-book-date">Published: 1999</p>
-              <button class="btn rent-btn">Rent</button>
-            </div>
-          </div> -->
-
-
-
 
 
           <!-- <div class="book-container">
