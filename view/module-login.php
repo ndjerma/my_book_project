@@ -11,7 +11,3 @@
       </form>
       <p class="register-link">Don't have an account? <a href="./index.php?module=registration">Sign Up</a></p>
 </section>
-
-
-
-
