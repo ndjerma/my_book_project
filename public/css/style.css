@@ -425,7 +425,21 @@ h3 {
   margin: 0 0 100px 0;
 }
 
+/* USER PAGE */
 
+.rented-books-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.rented-book-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.rented-book-img {
+  width: 400px;
+  height: auto;
+}
 
 
