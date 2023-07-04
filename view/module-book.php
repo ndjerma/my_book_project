@@ -59,5 +59,6 @@ if (isset($_GET['book_id'])) {
     </div>
   </section>
 
-
-
+<form action="./index.php?module=book" method="POST">
+  <input name="dugmesugavo"type="submit" class="btn">
+</form>

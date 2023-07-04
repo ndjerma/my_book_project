@@ -3,6 +3,7 @@
 
     <h3 class="rented-page-h3">These are the books you have rented:</h3>
     <section class="rented-books-wrapper">
+        
         <div class="rented-book-wrapper">
             <div class="rented-book-img">
                 <img src="./public/book-img/1984.jpg" alt="pic">
