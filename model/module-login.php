@@ -30,25 +30,33 @@ if ($_POST) {
 
 }
 
-function user_login($email, $password){
-      $email = filter_var($email, filter: FILTER_SANITIZE_EMAIL);
-      $password = filter_var($password, filter: FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-
-      $query = " SELECT * FROM users WHERE email='$email' ";
+function user_login($email, $password) {
+      $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+      $password = filter_var($password, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+  
+      $query = "SELECT * FROM users WHERE email='$email'";
       $result = query($query);
+  
       if ($result->num_rows > 0) {
-            $data = $result->fetch_assoc();
-
-            if ($password == $data['password']) {
-                  $_SESSION['email'] = $email;
-                  return true;
-            } else {
-                  return false;
-            }
+          $data = $result->fetch_assoc();
+  
+          if ($password == $data['password']) {
+              $_SESSION['email'] = $email;
+              
+              if ($data['is_admin'] == 1) {
+                  $_SESSION['is_admin'] = true; 
+              }
+              
+              return true;
+          } else {
+              return false;
+          }
       } else {
-            return false;
+          return false;
       }
-}
+  }
+
+
 
 
 
