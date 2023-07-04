@@ -17,20 +17,22 @@ if (isset($_GET['book_id'])) {
               <h2>' . $row["book_name"] . '</h2>
               <p>Author: ' . $row["book_author_name"] . '</p>
               <p>Description: ' . $row["book_description"] . '</p>
-              <p>Published: ' . $row["book_date_published"] . '</p>'
+              <p>Published: ' . $row["book_date_published"] . '</p>'; // Dodajemo tačku na kraju ovog reda
 
-              if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == true ): 
-                '<button class="rent-btn btn">Delete</button>'
-                else 
-                '<button class="rent-btn btn">Rent</button>'
-            '</div>
+              if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == true ) { 
+                echo '<button class="rent-btn btn">Delete</button>'; 
+              } else {
+                echo '<button class="rent-btn btn">Rent</button>'; 
+              }
+              
+    echo '</div>
           </div>';
   } else {
     echo "Book not found";
   }
 }
-
 ?>
+
 
 
 <section class="discover-books container">
