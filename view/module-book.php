@@ -24,7 +24,9 @@ if (isset($_GET['book_id'])) {
                         <input name="delete" type="submit" class="btn" value="DELETE"> 
                       </form>';
               } else {
-                echo '<button class="rent-btn btn">Rent</button>'; 
+                echo ' <form action="./index.php?module=rent" method="post">
+                        <input name="rent" type="submit" class="rent-btn btn" value="RENT"> 
+                      </form>';
               }
               
     echo '</div>

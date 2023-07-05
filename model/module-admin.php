@@ -49,15 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
 
-
-
-
-
-
-
-
-
-
 $page_output = [
     'page_title' => 'Hello admin, '. $_SESSION['first_name'],
     'view' => 'module-admin.php'

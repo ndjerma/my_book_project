@@ -42,7 +42,8 @@ function user_login($email, $password) {
   
           if ($password == $data['password']) {
               $_SESSION['email'] = $email;
-              $_SESSION['first_name'] = $data['first_name'];
+              $_SESSION['first_name'] = $data['first_name'];            
+              $_SESSION['users_id'] = $data['users_id'];
               
               if ($data['is_admin'] == 1) {
                   $_SESSION['is_admin'] = true; 
@@ -57,7 +58,7 @@ function user_login($email, $password) {
       }
   }
 
-
+ 
 
 
 
