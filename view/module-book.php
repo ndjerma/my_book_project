@@ -20,7 +20,9 @@ if (isset($_GET['book_id'])) {
               <p>Published: ' . $row["book_date_published"] . '</p>'; // Dodajemo tačku na kraju ovog reda
 
               if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == true ) { 
-                echo '<button class="rent-btn btn">Delete</button>'; 
+                echo ' <form action="./index.php?module=delete" method="post">
+                        <input name="delete" type="submit" class="btn" value="DELETE"> 
+                      </form>';
               } else {
                 echo '<button class="rent-btn btn">Rent</button>'; 
               }
@@ -31,6 +33,7 @@ if (isset($_GET['book_id'])) {
     echo "Book not found";
   }
 }
+$_SESSION['book_id'] = $book_id;
 ?>
 
 
@@ -59,6 +62,3 @@ if (isset($_GET['book_id'])) {
     </div>
   </section>
 
-<form action="./index.php?module=book" method="POST">
-  <input name="dugmesugavo"type="submit" class="btn">
-</form>

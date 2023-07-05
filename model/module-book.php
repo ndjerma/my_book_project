@@ -1,18 +1,5 @@
 <?php
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $var1 = $_POST['dugmesugavo'];
-    print_r($var1);
-}
-
-
-
-
-
-
-
-
-
 
 
 
