@@ -1,9 +1,8 @@
 <?php
 
-$users_id = $_SESSION['users_id'];
 
-$query = "SELECT book.* FROM rentals JOIN book ON rentals.book_id = book.book_id WHERE rentals.users_id = $users_id";
-$result = query($query);
+
+// $_SESSION['rentals_id'] = $result['rentals_id'];
 
 
 

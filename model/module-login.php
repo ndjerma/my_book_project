@@ -58,8 +58,8 @@ function user_login($email, $password) {
       }
   }
 
- 
 
+  $is_admin = isset($_SESSION['is_admin']) ? $_SESSION['is_admin'] : false;
 
 
 

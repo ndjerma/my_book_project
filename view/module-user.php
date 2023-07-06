@@ -5,7 +5,10 @@
     <section class="rented-books-wrapper">
         
 <?php 
-    
+$users_id = $_SESSION['users_id'];
+
+$query = "SELECT book.* FROM rentals JOIN book ON rentals.book_id = book.book_id WHERE rentals.users_id = $users_id";
+$result = query($query);
 if ($result -> num_rows > 0) {
     while($row = $result->fetch_assoc()){
         echo '<div class="rented-book-wrapper">
@@ -14,14 +17,14 @@ if ($result -> num_rows > 0) {
         </div>
         <div class="rented-book-text">
             <h4>' . $row["book_name"] . '</h4>
-            <h3>' . $row["book_author_name"] . '</h3>
+            <h3 class="rented-author">' . $row["book_author_name"] . '</h3>
             <p>' . $row["book_description"] . '</p>
         </div>
 
         <div class="rented-book-btns">
-            <button class="btn btn-remove">
-                Remove
-            </button>
+            <form action="./index.php?module=delete" method="post">
+                <input name="delete" type="submit" class="btn btn-remove" value="DELETE"> 
+            </form>
 
             <a href="./index.php?module=books" class="btn btn-add">
                 Add new book
@@ -30,7 +33,7 @@ if ($result -> num_rows > 0) {
     </div>';
     }
 } else 
-    echo "0 results"
+    echo "You have 0 rented books";
     
     
     
