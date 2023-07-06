@@ -1,21 +1,7 @@
 <?php
 
 
-
 // $_SESSION['rentals_id'] = $result['rentals_id'];
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

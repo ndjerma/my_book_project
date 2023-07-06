@@ -17,7 +17,7 @@ if (isset($_GET['book_id'])) {
               <h2>' . $row["book_name"] . '</h2>
               <p>Author: ' . $row["book_author_name"] . '</p>
               <p>Description: ' . $row["book_description"] . '</p>
-              <p>Published: ' . $row["book_date_published"] . '</p>'; // Dodajemo tačku na kraju ovog reda
+              <p>Published: ' . $row["book_date_published"] . '</p>'; 
 
               if(isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == true ) { 
                 echo ' <form action="./index.php?module=delete" method="post">
@@ -44,7 +44,7 @@ $_SESSION['book_id'] = $book_id;
     <h3>Related featured books</h3>
     <div class="books-wrapper">
       <?php
-        // SQL upit koji prikazuje četiri nasumične knjige
+        
         $query = "SELECT * FROM book ORDER BY RAND() LIMIT 4";
         $result = query($query);
 

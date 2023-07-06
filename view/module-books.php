@@ -17,12 +17,12 @@
     if(isset($_POST['search_term'])) {
       $search_term = $_POST['search_term'];
 
-      // SQL upit koji uzima u obzir unos korisnika
+      
       $query = "SELECT * FROM book WHERE book_name LIKE '%$search_term%' OR book_author_name LIKE '%$search_term%'";
 
       $result = query($query);
     } else {
-      // SQL upit koji prikazuje sve knjige ako forma nije poslata
+      
       $query = "SELECT * FROM book";
       $result = query($query);
     }

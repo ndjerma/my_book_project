@@ -9,7 +9,7 @@ if($_SESSION['is_admin'] == true) {
         confirm(query($sql));
         echo 'Uspesno';
     } else 
-        echo "Neuspesno 11";
+        echo "Neuspesno";
     
     
     
